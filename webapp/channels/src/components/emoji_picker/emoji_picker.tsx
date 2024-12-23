@@ -121,11 +121,11 @@ const EmojiPicker = ({
         shouldRunCreateCategoryAndEmojiRows.current = false;
 
         const [updatedCategoryOrEmojisRows, updatedEmojiPositions] = createCategoryAndEmojiRows(allEmojis, categories, filter, userSkinTone);
-        
-        if(activeCategory !== 'custom'){
+
+        if (activeCategory !== 'custom') {
             selectFirstEmoji(updatedEmojiPositions);
         }
-        
+
         setCategoryOrEmojisRows(updatedCategoryOrEmojisRows);
         setEmojiPositionsArray(updatedEmojiPositions);
         throttledSearchCustomEmoji.current(filter, customEmojisEnabled);
